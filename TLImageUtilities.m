@@ -8,6 +8,7 @@
 
 #import "TLImageUtilities.h"
 #import <ImageIO/ImageIO.h>
+#import <QuartzCore/QuartzCore.h>
 
 @implementation TLImageUtilities
 
