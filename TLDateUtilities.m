@@ -55,4 +55,12 @@
     }
 }
 
++ (NSDate *)dateFromSqlString:(NSString *)dateString
+{
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    return [dateFormatter dateFromString:dateString];
+}
+
 @end

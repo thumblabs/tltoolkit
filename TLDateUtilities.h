@@ -11,5 +11,6 @@
 @interface TLDateUtilities : NSObject
 
 + (NSString *)relativeTimeStringForDate:(NSDate *)date;
++ (NSDate *)dateFromSqlString:(NSString *)dateString;
 
 @end
