@@ -19,7 +19,7 @@
 
 + (NSString*)relativeTimeStringForDate:(NSDate *)date
 {
-    NSTimeInterval elapsed = abs([[NSDate date] timeIntervalSinceNow]);
+    NSTimeInterval elapsed = abs([date timeIntervalSinceNow]);
     
     if (elapsed < TL_MINUTE) {
         return NSLocalizedString(@"just now", @"just now");
