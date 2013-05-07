@@ -12,5 +12,6 @@
 
 + (NSString *)relativeTimeStringForDate:(NSDate *)date;
 + (NSDate *)dateFromSqlString:(NSString *)dateString;
++ (NSString *)timeTodayDayOfWeekOrFullDate:(NSDate *)date;
 
 @end

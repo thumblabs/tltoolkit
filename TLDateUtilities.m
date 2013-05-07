@@ -63,4 +63,25 @@
     return [dateFormatter dateFromString:dateString];
 }
 
++ (NSString *)timeTodayDayOfWeekOrFullDate:(NSDate *)date
+{
+    NSTimeInterval elapsed = abs([date timeIntervalSinceNow]);
+    
+    if (elapsed < TL_DAY) {
+        NSDateFormatter *formatter = [NSDateFormatter new];
+        [formatter setDateFormat:@"h:mm a"];
+        return [formatter stringFromDate:date];
+    }
+    else if (elapsed < TL_WEEK) {
+        NSDateFormatter *formatter = [NSDateFormatter new];
+        [formatter setDateFormat:@"EEEE"];
+        return [formatter stringFromDate:date];
+    }
+    else {
+        NSDateFormatter *formatter = [NSDateFormatter new];
+        [formatter setDateFormat:@"MMM/dd/yyyy h:mm a"];
+        return [formatter stringFromDate:date];
+    }
+}
+
 @end
