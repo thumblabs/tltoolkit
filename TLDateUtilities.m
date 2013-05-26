@@ -79,7 +79,7 @@
     }
     else {
         NSDateFormatter *formatter = [NSDateFormatter new];
-        [formatter setDateFormat:@"MMM/dd/yyyy h:mm a"];
+        [formatter setDateFormat:@"MMM/dd/yyyy"];
         return [formatter stringFromDate:date];
     }
 }
