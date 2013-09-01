@@ -81,7 +81,7 @@
     }
     else {
         NSDateFormatter *formatter = [NSDateFormatter new];
-        [formatter setDateFormat:@"MMM/dd/yyyy"];
+        [formatter setDateFormat:@"MMM dd, yyyy"];
         return [formatter stringFromDate:date];
     }
 }
